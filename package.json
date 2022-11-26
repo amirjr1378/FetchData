@@ -1,0 +1,71 @@
+{
+  "name": "sales",
+  "version": "0.1.0",
+  "private": true,
+  "author": "AMIR SOTON GANG",
+  "dependencies": {
+    "eslint-plugin-react": "^7.30.1",
+    "lint-staged": "^12.4.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0"
+  },
+  "scripts": {
+    "install:shared": "cd ./src/shared && yarn",
+    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "twv": "tailwind-config-viewer -o",
+    "prepare": "husky install",
+    "format": "prettier --write .",
+    "lint:fix": "eslint --fix .",
+    "gen:api": "yarn --cwd src/shared gen:api"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@svgr/cli": "^6.2.1",
+    "@types/jest": "^27.4.0",
+    "@types/lodash": "^4.14.178",
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-helmet": "^6.1.5",
+    "@types/react-slick": "^0.23.10",
+    "@types/react-window": "^1.8.5",
+    "@types/tailwindcss": "^3.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "autoprefixer": "^10.4.2",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-react-app": "^7.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^8.0.0",
+    "postcss": "^8.4.7",
+    "postcss-import": "^14.0.2",
+    "prettier": "^2.5.1",
+    "swagger-axios-codegen": "^0.12.10",
+    "tailwind-config-viewer": "^1.7.0",
+    "tailwindcss": "^3.0.23",
+    "typescript": "4.5.5"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "npx eslint --fix"
+    ]
+  }
+}
